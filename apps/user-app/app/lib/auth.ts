@@ -21,6 +21,7 @@ export const authOptions = {
             });
 
             if (existingUser) {
+                // we cannot convert new pass into hash and then compare because every time new hash is generated even for same word so bcrypt compare is use to compare two pass
                 const passwordValidation = await bcrypt.compare(credentials.password, existingUser.password);
                 if (passwordValidation) {
                     return {

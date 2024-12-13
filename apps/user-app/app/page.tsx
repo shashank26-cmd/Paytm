@@ -7,7 +7,6 @@ export default function Page(): JSX.Element {
   return (
    <div>
       <Appbar onSignin={signIn} onSignout={signOut} user={session.data?.user} />
-      <div>hello hey guys </div>
    </div>
   );
 }
